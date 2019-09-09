@@ -1,0 +1,43 @@
+{
+	"name" : "concurrent-php/http",
+	"description" : "HTTP Client & Server",
+	"type" : "library",
+	"license" : "MIT",
+	"homepage" : "https://github.com/concurrent-php/http",
+	"authors" : [{
+			"name" : "Martin Schröder",
+			"email" : "m.schroeder2007@gmail.com"
+		}
+	],
+	"minimum-stability" : "dev",
+	"prefer-stable" : true,
+	"require" : {
+		"php" : "~7.3",
+		"ext-async" : "*",
+		"psr/log" : "~1.0",
+		"psr/http-message" : "~1.0",
+		"psr/http-factory" : "~1.0",
+		"psr/http-client" : "~1.0",
+		"psr/http-server-handler" : "~1.0",
+		"psr/http-message-implementation" : "~1.0",
+		"psr/http-factory-implementation" : "~1.0"
+	},
+	"require-dev" : {
+		"nyholm/psr7" : "~1.0",
+		"monolog/monolog" : "~1.23",
+		"concurrent-php/async-api" : "dev-master"
+	},
+	"provide" : {
+		"psr/http-client-implementation" : "1.0"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"Concurrent\\Http\\" : "src/"
+		}
+	},
+	"autoload-dev" : {
+		"psr-4" : {
+			"Concurrent\\Http\\" : "test/src/"
+		}
+	}
+}
